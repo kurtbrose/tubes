@@ -24,7 +24,6 @@ def link(*funcs):
     'chain functions of a single parameter together'
     def linked(p):
         try:
-            reduce(lambda f: funcs)
             for f in funcs:
                 p = f(p)
         except AbortTube as e:
